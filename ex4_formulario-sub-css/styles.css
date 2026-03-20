@@ -1,7 +1,7 @@
 .custom-form {
-    background-color: linear-gradiente(145deg, #2c3e50 #3498db);
+    background: linear-gradient(145deg, #2c3e50, #3498db);
     padding: 2rem;
-    border-radius: 15x;
+    border-radius: 15px;
 }
 
 .form-label {
@@ -14,7 +14,13 @@
 }
 
 /* Sub-escrevendo uma classe do Bootstrap */
-.btn.btn-primary {
+/* .btn.btn-primary {
+    background: linear-gradient(45deg, #e74c3c, #f39c12);
+    padding: 0.8 rem 2rem;
+    border-radius: 50px;
+    border: none;
+} */
+.custom-buttom {
     background: linear-gradient(45deg, #e74c3c, #f39c12);
     padding: 0.8 rem 2rem;
     border-radius: 50px;
