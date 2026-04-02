@@ -17,20 +17,29 @@
         <!-- ================================
              BOTÕES DE CONTROLE DOS ALERTS
              ================================ -->
-
-
-        <!-- 1ª Digitação (Aqui) -->
-
+          <div class="mb-3">
+            <button class="btn btn-success me-2" onclick="mostrarSucesso()">Mostrar Sucesso</button>
+            <button class="btn btn-danger me-2" onclick="mostrarErro()">Mostrar Erro</button>
+            <button class="btn btn-warning me-2" onclick="mostrarToast()">Mostrar Toast</button>
+            </div>
 
         <!-- ================================
              ALERT DE SUCESSO
              Começa sem a classe "show", ou seja, invisível.
              O JS adiciona "show" ao clicar no botão.
              ================================ -->
-
-
+          <div class="mb-3">
+            <div class="alert alert-success alert-dismissible fade" id="successAlert">
+               <strong>Sucesso!</strong> Operação realizada com sucesso!
+               <button class="btn-close" type="button" onclick="fecharAlert('successAlert')"></button>
+          </div>
+     </div>
 
         <!-- 2ª Digitação (Aqui) -->
+
+
+
+
 
 
 
@@ -48,12 +57,18 @@
              Posicionado no canto superior direito via Bootstrap.
              O JS usa a classe Bootstrap Toast para exibir/ocultar.
              ================================ -->
-
-
-
-        <!-- 3ª Digitação (Aqui) -->
-
-
+        <div class="position-fixed top-50 start-50 translate-middle p-3" style="z-index: 10">
+            <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+               <!-- Cabeçalho da notificação-->
+                <div class="toast-header">
+                    <strong class="me-auto">Notificação</strong>
+                    <small>Agora</small>
+                    <button class="btn-close" type="button" data-bs-dismiss="toast"></button>
+                </div>
+                <!-- Corpo da notificação -->
+                <div class="toast-body">
+                    Esta é uma mensagem toast!
+                </div>
 
 
         <!-- ================================
@@ -76,14 +91,18 @@
              CONTROLES DA BARRA DE PROGRESSO
              Botões para aumentar/diminuir e ligar/desligar a animação.
              ================================ -->
+         <div class="btn-group me-2">
+          <!-- Botão para diminuir a % da barra de progresso -->
+          <button class="btn btn-secondary" onclick="updateProgress(-10)">-10%</button>
 
+          <!-- Botão para aumentar a % da barra de progresso -->
+          <button class="btn btn-primary" onclick="updateProgress(10)">+10%</button>    
+         </div>
 
-
-
-        <!-- 4ª Digitação (Aqui) -->
-
-        
-
+         <!-- Ligar/desligar (Animação da barra de progresso)-->
+          <button class="btn btn-success" onclick="toggleAnimationBtn" onclick="toggleAnimacao()">
+               Ligar animação
+          </button>
 
     </div>
 
